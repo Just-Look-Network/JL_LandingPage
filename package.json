@@ -1,0 +1,43 @@
+{
+    "name": "jl_landingpage",
+    "version": "0.0.1",
+    "description": "> Source code of the Just-Look Network Landing page.",
+    "author": "PoLLi",
+    "scripts": {
+        "dev": "parcel src/index.html",
+        "build": "parcel build src/index.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Just-Look-Network/JL_LandingPage.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Just-Look-Network/JL_LandingPage/issues"
+    },
+    "customDistStructure": {
+        "config": {
+            ".js": "assets/js",
+            ".js.map": "assets/js",
+            ".css": "assets/css",
+            ".css.map": "assets/css",
+            "assets/img": [
+                ".jpg",
+                ".png",
+                ".svg"
+            ]
+        },
+        "options": {
+            "development": true
+        }
+    },
+    "dependencies": {
+        "parcel-bundler": "^1.12.4"
+    },
+    "devDependencies": {
+        "parcel-plugin-custom-dist-structure": "^1.1.14",
+        "parcel-plugin-nuke-dist": "^1.0.1",
+        "prettier": "^2.0.5",
+        "sass": "^1.26.10",
+        "typescript": "^3.9.6"
+    }
+}
