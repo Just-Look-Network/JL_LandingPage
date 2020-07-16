@@ -6,10 +6,11 @@
 * --------------------------------
 **/
 
-// Import Variables
-@import 'variables.scss';
-
 // Import important things first
+//@import 'functions';
+@import 'variables';
+
+@import 'important/mixins';
 @import 'important/root';
 @import 'important/reset';
 

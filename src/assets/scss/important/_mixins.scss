@@ -1,0 +1,17 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Theme Mixins
+* --------------------------------
+**/
+
+@mixin responsive($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+    } @else {
+        @warn "Wrong Breakpoint: #{$breakpoint}.";
+    }
+}

@@ -20,12 +20,24 @@ $orange: #ff6600;
 * 2. Body Settings
 * ----------------------
 **/
-$body-color: $black;
-$body-bg: $white;
+$body-color: #ffffff;
+$body-bg: #323232;
 
 /**
 * ----------------------
-* 3. Typography
+* 3. Breakpoint Settings
+* ----------------------
+**/
+$breakpoints: (
+    xs: 576px,
+    sm: 768px,
+    md: 992px,
+    lg: 1200px
+);
+
+/**
+* ----------------------
+* 4. Typography
 * ----------------------
 **/
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
@@ -34,5 +46,19 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mon
 $font-family-base: $font-family-sans-serif;
 
 $font-size-base: 1.6rem;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
 $font-weight-base: 400;
+$font-weight-strong: 600;
+$font-weight-bold: 800;
+$font-weight-bolder: bolder;
+
 $line-height-base: 1;
+
+/**
+* ----------------------
+* 5. Transitions
+* ----------------------
+**/
+$transition-fast: all 0.25s ease-out;

@@ -1,7 +1,7 @@
 /**
 * --------------------------------
 * Just-Look Network - LandingPage
-* Theme Reset
+* TImportant: Reset
 *
 * Based on normalize.css
 * --------------------------------
@@ -30,7 +30,16 @@ body {
     margin: 0;
 }
 
-main {
+main,
+nav,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+section {
     display: block;
 }
 

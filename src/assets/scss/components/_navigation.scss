@@ -1,0 +1,80 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Component: Navigation
+* --------------------------------
+**/
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+
+    nav {
+        display: flex;
+        height: 10vh;
+        margin: 0 auto;
+        width: 90%;
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: flex-end;
+            list-style: none;
+            padding: 0;
+
+            li a {
+                color: $white;
+                font-size: 1.4rem;
+                font-weight: $font-weight-bold;
+                text-decoration: none;
+                padding: 1rem;
+                transition: $transition-fast;
+
+                &:hover {
+                    color: #ff944d;
+                }
+
+                &:active,
+                &.active {
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+
+@include responsive(xs) {
+    .navigation > nav {
+        width: 80%;
+
+        ul {
+            justify-content: flex-start;
+
+            li {
+                margin-right: 2rem;
+
+                &:first-child {
+                    margin-left: 4rem;
+                }
+
+                a {
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+}
