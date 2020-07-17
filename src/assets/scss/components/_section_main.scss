@@ -1,0 +1,158 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Component: Section - Main
+* --------------------------------
+**/
+
+section.main {
+    padding-top: 0;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+
+    .info {
+        display: grid;
+        grid-row: 2/3;
+        grid-column: 1/5;
+
+        h1 {
+            margin: 0;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #bbb;
+        }
+    }
+
+    .highlight {
+        display: grid;
+        grid-row: 3/4;
+        grid-column: 1/5;
+        align-self: center;
+        justify-content: center;
+
+        svg #Main {
+            #JL_top_left {
+                animation: top_left 2s ease alternate infinite;
+                transform-origin: center;
+            }
+
+            #JL_top_right {
+                animation: top_right 2s ease alternate infinite;
+                transform-origin: center;
+            }
+
+            #JL_right {
+                animation: bot_right 2s ease alternate infinite;
+                transform-origin: center;
+            }
+
+            #JL_left {
+                animation: bot_left 2s ease alternate infinite;
+                transform-origin: center;
+            }
+
+            #JL_top {
+                animation: top 2s ease alternate infinite;
+                transform-origin: center;
+
+                //transform: translateY(-2000px);
+            }
+
+            @keyframes top_right {
+                55% {
+                    transform: scale(1);
+                }
+
+                75% {
+                    transform: scale(1.1);
+                }
+
+                100% {
+                    transform: scale(1.1);
+                }
+            }
+
+            @keyframes top_left {
+                55% {
+                    transform: scale(1);
+                }
+
+                75% {
+                    transform: scale(1.1);
+                }
+
+                100% {
+                    transform: scale(1.1);
+                }
+            }
+
+            @keyframes bot_left {
+                50% {
+                    transform: scale(1);
+                }
+
+                70% {
+                    transform: scale(1.1);
+                }
+
+                100% {
+                    transform: scale(1.1);
+                }
+            }
+
+            @keyframes bot_right {
+                50% {
+                    transform: scale(1);
+                }
+
+                70% {
+                    transform: scale(1.1);
+                }
+
+                100% {
+                    transform: scale(1.1);
+                }
+            }
+
+            @keyframes top {
+                60% {
+                    //transform: translateY(-2000px);
+                    transform: scale(1);
+                    //transform: rotateZ(0deg);
+                }
+
+                80% {
+                    //transform: translateY(0px);
+                    transform: scale(1.1);
+                    //transform: rotateZ(90deg);
+                }
+
+                100% {
+                    //transform: translateY(0px);
+                    transform: scale(1.1);
+                    //transform: rotateZ(90deg);
+                }
+            }
+        }
+    }
+
+    .cta {
+        display: grid;
+        grid-row: 4/5;
+        grid-column: 1/5;
+
+        button {
+            width: fit-content;
+            height: fit-content;
+            padding: 1rem;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+}
