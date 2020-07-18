@@ -14,8 +14,9 @@
 
     nav {
         display: flex;
-        height: 10vh;
+        min-height: 10vh;
         margin: 0 auto;
+        padding-top: 1rem;
         width: 90%;
 
         .logo {

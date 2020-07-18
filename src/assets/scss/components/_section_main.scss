@@ -36,6 +36,15 @@ section.main {
         align-self: center;
         justify-content: center;
 
+        // fkn moblie landscape shit
+        @media (max-width: 768px) and (orientation: landscape) {
+            display: none;
+        }
+
+        svg {
+            height: 30rem;
+        }
+
         svg #Main {
             #JL_top_left {
                 animation: top_left 2s ease alternate infinite;
@@ -174,7 +183,7 @@ section.main {
 
         .highlight {
             svg {
-                height: 50rem;
+                height: 45rem;
             }
         }
     }
