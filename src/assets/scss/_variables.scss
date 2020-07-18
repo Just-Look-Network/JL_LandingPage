@@ -15,9 +15,25 @@ $black: #000000;
 $gray: #808080;
 $orange: #ff6600;
 
-$primary-color: $orange;
-$light-color: #eeeeee;
-$dark-color: #323232;
+$primary: $orange;
+$secondary: $gray;
+$light: #eeeeee;
+$dark: #323232;
+$transparent: transparent;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+    (
+        'primary': $primary,
+        'secondary': $secondary,
+        'light': $light,
+        'dark': $dark,
+        'white': $white,
+        'black': $black,
+        'transparent': $transparent
+    ),
+    $theme-colors
+);
 
 $line-color: rgba(50, 50, 50);
 $line-dot-border-color: $line-color;

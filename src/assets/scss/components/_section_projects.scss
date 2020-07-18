@@ -1,0 +1,32 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Component: Section - Projects
+* --------------------------------
+**/
+
+section.projects {
+    .headline {
+        display: grid;
+        grid-row: 1/2;
+        grid-column: 1/5;
+        align-content: center;
+
+        h2 {
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+@include responsive(sm) {
+    section.projects {
+        .headline {
+            grid-column: 2/5;
+            padding-left: 5rem;
+        }
+    }
+}

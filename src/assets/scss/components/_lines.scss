@@ -9,18 +9,6 @@
     display: none;
     position: relative;
 
-    &.line-top {
-        grid-row: 1/2;
-    }
-
-    &.line-middle {
-        grid-row: 2/4;
-    }
-
-    &.line-bottom {
-        grid-row: 4/5;
-    }
-
     &::after {
         position: absolute;
         content: '';
@@ -31,6 +19,29 @@
         left: 50%;
 
         transform: translate(-50%);
+    }
+
+    // Vertical Line Top
+    &.line-top {
+        grid-row: 1/2;
+
+        &.line-small::after {
+            bottom: 6rem;
+        }
+    }
+
+    // Vertical Line Middle
+    &.line-middle {
+        grid-row: 2/4;
+    }
+
+    // Vertical Line Bottom
+    &.line-bottom {
+        grid-row: 4/5;
+
+        &.line-small::after {
+            top: 6rem;
+        }
     }
 }
 

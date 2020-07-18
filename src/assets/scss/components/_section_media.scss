@@ -1,0 +1,33 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Component: Section - Media
+* --------------------------------
+**/
+
+section.media {
+    .headline {
+        display: grid;
+        grid-row: 1/2;
+        grid-column: 1/5;
+        align-content: center;
+
+        h2 {
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+            padding-bottom: 6rem;
+        }
+    }
+}
+
+@include responsive(sm) {
+    section.media {
+        .headline {
+            grid-column: 2/5;
+            padding-left: 5rem;
+        }
+    }
+}

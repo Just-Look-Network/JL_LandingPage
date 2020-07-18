@@ -6,9 +6,6 @@
 **/
 
 section.main {
-    padding-top: 0;
-    height: calc(var(--vh, 1vh) * 100);
-
     .info {
         display: grid;
         grid-row: 2/3;

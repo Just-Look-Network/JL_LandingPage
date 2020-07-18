@@ -5,7 +5,21 @@
 * --------------------------------
 **/
 
+// Normal Container
 .container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+@include responsive(xs) {
+    .container {
+        width: 80%;
+    }
+}
+
+// Grid Container
+.container-grid {
     width: 90%;
     height: 100%;
     margin: 0 auto;
@@ -16,7 +30,7 @@
 }
 
 @include responsive(xs) {
-    .container {
+    .container-grid {
         width: 80%;
     }
 }

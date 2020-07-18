@@ -25,18 +25,10 @@
     transition: $transition-fast;
 
     // colors
-    &.button-highlight {
-        background-color: $primary-color;
-    }
-
-    &.button-light {
-        background-color: $light-color;
-        color: $dark-color;
-    }
-
-    &.button-dark {
-        background-color: $dark-color;
-        color: $light-color;
+    @each $color, $value in $theme-colors {
+        &.button-#{$color} {
+            background-color: $value !important;
+        }
     }
 
     // sizes
