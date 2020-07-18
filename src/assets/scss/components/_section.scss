@@ -16,6 +16,8 @@ section.main {
     padding-top: 0;
     padding-bottom: 0;
     height: calc(var(--vh, 1vh) * 100);
+
+    background-image: linear-gradient(to left bottom, #303030, #292929, #212121, #191919, #101010);
 }
 
 section.divider {
