@@ -14,6 +14,9 @@ $white: #ffffff;
 $black: #000000;
 $gray: #808080;
 $orange: #ff6600;
+$blue: #21adf2;
+$green: #94c93d;
+$yellow: #f2cd21;
 
 $primary: $orange;
 $secondary: $gray;
@@ -33,6 +36,21 @@ $theme-colors: map-merge(
         'transparent': $transparent
     ),
     $theme-colors
+);
+
+$colors: ();
+$colors: map-merge(
+    (
+        'primary': $primary,
+        'secondary': $secondary,
+        'white': $white,
+        'black': $black,
+        'orange': $orange,
+        'blue': $blue,
+        'green': $green,
+        'yellow': $yellow
+    ),
+    $colors
 );
 
 $line-color: rgba(50, 50, 50);
