@@ -23,35 +23,70 @@
             display: flex;
             align-items: center;
 
+            .title {
+                font-size: 2.6rem;
+                font-weight: $font-weight-strong;
+                padding-left: 1rem;
+            }
+
             img {
                 width: 5rem;
                 height: 5rem;
             }
         }
 
-        ul {
+        ul.nav {
             display: flex;
-            flex: 1;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: space-evenly;
             list-style: none;
+            position: absolute;
+            background-color: #121212;
+            flex-direction: column;
+
+            flex: 1;
+            right: 0;
+            top: 10vh;
+            height: calc(var(--vh, 1vh) * 90);
+            width: 50%;
             padding: 0;
+
+            transform: translateX(100%);
+            transition: $transition-fast;
+
+            &.nav-open {
+                transform: translateX(0);
+            }
+
+            li.nav-item {
+                opacity: 0;
+            }
 
             li a {
                 color: $white;
-                font-size: 1.4rem;
+                font-size: 3.2rem;
                 font-weight: $font-weight-bold;
                 text-decoration: none;
                 padding: 1rem;
-                transition: $transition-fast;
+            }
+        }
 
-                &:hover {
-                    color: #ff944d;
-                }
+        .burger {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            flex: 1;
+            cursor: pointer;
 
-                &:active,
-                &.active {
-                    color: $orange;
+            div {
+                width: 25px;
+                height: 3px;
+                margin-bottom: 5px;
+                background-color: #fff;
+
+                &:last-child {
+                    margin-bottom: 0;
                 }
             }
         }
@@ -62,10 +97,18 @@
     .navigation > nav {
         width: 80%;
 
-        ul {
+        ul.nav {
             justify-content: flex-start;
+            flex-direction: row;
+            position: static;
+            height: auto;
+            width: auto;
 
-            li {
+            transform: translateX(0);
+            background-color: $transparent;
+
+            li.nav-item {
+                opacity: 1;
                 margin-right: 2rem;
 
                 &:first-child {
@@ -74,8 +117,36 @@
 
                 a {
                     padding: 2rem;
+                    font-size: 1.4rem;
+
+                    transition: color 0.25s ease-out;
+
+                    &:hover {
+                        color: #ff944d;
+                    }
+
+                    &:active,
+                    &.active {
+                        color: $orange;
+                    }
                 }
             }
         }
+
+        .burger {
+            display: none;
+        }
+    }
+}
+
+@keyframes navItemAnim {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
