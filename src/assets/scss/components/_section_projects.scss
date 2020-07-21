@@ -12,11 +12,11 @@ section.projects {
         grid-column: 1/5;
         align-content: center;
 
-        h2 {
+        h2.title {
             margin: 0;
         }
 
-        p {
+        p.desc {
             margin: 0;
         }
     }
