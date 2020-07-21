@@ -11,12 +11,19 @@
     left: 0;
     width: 100%;
     z-index: 99;
+    background: #121212;
+
+    transition: background 0.25s ease;
+
+    &.navigation-scroll {
+        background: #121212 !important;
+    }
 
     nav {
         display: flex;
         min-height: 10vh;
         margin: 0 auto;
-        padding-top: 1rem;
+        padding: 0.5rem 0;
         width: 90%;
 
         .logo {
@@ -46,10 +53,11 @@
 
             flex: 1;
             right: 0;
-            top: 10vh;
-            height: calc(var(--vh, 1vh) * 90);
+            top: 8vh;
+            height: calc(var(--vh, 1vh) * 92);
             width: 50%;
             padding: 0;
+            margin: 0;
 
             transform: translateX(100%);
             transition: $transition-fast;
@@ -64,7 +72,7 @@
 
             li a {
                 color: $white;
-                font-size: 3.2rem;
+                font-size: 2.6rem;
                 font-weight: $font-weight-bold;
                 text-decoration: none;
                 padding: 1rem;
@@ -84,9 +92,22 @@
                 height: 3px;
                 margin-bottom: 5px;
                 background-color: #fff;
+                transition: $transition-fast;
 
                 &:last-child {
                     margin-bottom: 0;
+                }
+            }
+
+            &.toggle {
+                .line1 {
+                    transform: rotate(-45deg) translate(-5px, 6px);
+                }
+                .line2 {
+                    opacity: 0;
+                }
+                .line3 {
+                    transform: rotate(45deg) translate(-5px, -6px);
                 }
             }
         }
@@ -94,47 +115,52 @@
 }
 
 @include responsive(xs) {
-    .navigation > nav {
-        width: 80%;
+    .navigation {
+        background: transparent;
 
-        ul.nav {
-            justify-content: flex-start;
-            flex-direction: row;
-            position: static;
-            height: auto;
-            width: auto;
+        nav {
+            width: 80%;
+            min-height: 8vh;
 
-            transform: translateX(0);
-            background-color: $transparent;
+            ul.nav {
+                justify-content: flex-start;
+                flex-direction: row;
+                position: static;
+                height: auto;
+                width: auto;
 
-            li.nav-item {
-                opacity: 1;
-                margin-right: 2rem;
+                transform: translateX(0);
+                background-color: $transparent;
 
-                &:first-child {
-                    margin-left: 4rem;
-                }
+                li.nav-item {
+                    opacity: 1;
+                    margin-right: 2rem;
 
-                a {
-                    padding: 2rem;
-                    font-size: 1.4rem;
-
-                    transition: color 0.25s ease-out;
-
-                    &:hover {
-                        color: #ff944d;
+                    &:first-child {
+                        margin-left: 4rem;
                     }
 
-                    &:active,
-                    &.active {
-                        color: $orange;
+                    a {
+                        padding: 2rem;
+                        font-size: 1.4rem;
+
+                        transition: color 0.25s ease-out;
+
+                        &:hover {
+                            color: #ff944d;
+                        }
+
+                        &:active,
+                        &.active {
+                            color: $orange;
+                        }
                     }
                 }
             }
-        }
 
-        .burger {
-            display: none;
+            .burger {
+                display: none;
+            }
         }
     }
 }
