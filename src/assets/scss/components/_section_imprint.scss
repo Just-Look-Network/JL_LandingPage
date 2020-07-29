@@ -1,0 +1,74 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Component: Section - Imprint
+* --------------------------------
+**/
+
+section.imprint {
+    height: auto;
+    min-height: 90vh;
+    padding-top: 10rem;
+
+    .headline {
+        display: grid;
+        grid-row: 1/2;
+        grid-column: 1/5;
+        align-content: center;
+
+        h2.title {
+            margin: 0;
+        }
+
+        p.desc {
+            margin: 0;
+            padding-bottom: 6rem;
+        }
+    }
+
+    .info {
+        display: grid;
+        grid-row: 2/5;
+        grid-column: 1/5;
+
+        h2 {
+            margin-bottom: 0;
+            font-size: 2.6rem;
+        }
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-top: 0.5rem;
+        }
+
+        hr {
+            margin-top: 2rem;
+            width: 80%;
+            border: none;
+            border-top: 1px solid $dark;
+        }
+
+        a {
+            color: $primary;
+        }
+    }
+}
+
+@include responsive(sm) {
+    section.imprint {
+        .headline {
+            grid-column: 2/5;
+            padding-left: 5rem;
+        }
+
+        .info {
+            padding-left: 5rem;
+            padding-bottom: 2rem;
+            grid-row: 2/4;
+            grid-column: 2/5;
+        }
+    }
+}

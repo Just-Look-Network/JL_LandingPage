@@ -6,6 +6,9 @@
 **/
 
 section.projects {
+    height: auto;
+    min-height: 100vh;
+
     .headline {
         display: grid;
         grid-row: 1/2;
@@ -20,6 +23,60 @@ section.projects {
             margin: 0;
         }
     }
+
+    .gallery {
+        display: grid;
+        grid-row: 2/5;
+        grid-column: 1/5;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        row-gap: 2rem;
+        column-gap: 2rem;
+
+        .img-container {
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid #121212;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+                filter: grayscale(1);
+                transition: $transition-fast;
+
+                &:hover {
+                    transform: scale(1.2) rotate(10deg);
+                    filter: grayscale(0);
+                }
+
+                &:hover + .title {
+                    opacity: 1;
+                    top: 50%;
+                }
+            }
+
+            .title {
+                position: absolute;
+                background-color: #121212;
+                border: 2px solid #ccc;
+                color: $body-color;
+                font-size: 2.4rem;
+                text-align: center;
+                padding: 0.4rem;
+                opacity: 0;
+                width: 80%;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                pointer-events: none;
+                transition: $transition-fast;
+            }
+        }
+    }
 }
 
 @include responsive(sm) {
@@ -27,6 +84,37 @@ section.projects {
         .headline {
             grid-column: 2/5;
             padding-left: 5rem;
+        }
+
+        .gallery {
+            grid-column: 2/5;
+            padding-left: 5rem;
+            padding-top: 5rem;
+
+            .img-container {
+                height: 200px;
+            }
+        }
+    }
+}
+
+@include responsive(md) {
+    section.projects {
+        .gallery > .img-container {
+            height: auto;
+            min-height: 300px;
+        }
+    }
+}
+
+@include responsive(lg) {
+    section.projects {
+        .gallery {
+            // padding-left: 5rem;
+            // margin-top: 5rem;
+            // grid-column: 2/5;
+            // flex-direction: row;
+            // column-gap: 3%;
         }
     }
 }
