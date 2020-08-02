@@ -4,7 +4,10 @@
 
 ## What is Just-Look Network?
 
-Just-Look Network ist eine Community rund um Gaming, Develeopment und Design. Egal ob Hardcore FPS Spieler, Hobby Web-Developer oder Designer, bei uns ist jeder willkommen!
+JLN is an Project build up by People that like to play games, develop, design and do all
+kinds of things together. We have different Modules that represent a specific section like
+Gaming or Development. We strive to be open to anyone that has fun develop a healthy
+Community in these Sections and want to work with.
 
 ## Installing
 
