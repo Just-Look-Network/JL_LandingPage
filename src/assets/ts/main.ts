@@ -22,7 +22,6 @@ function scrollSpy() {
     window.onscroll = () => {
         let scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
 
-        console.log(scrollPos);
         if (scrollPos > 75) {
             navigation.classList.add('navigation-scroll');
         } else {
@@ -44,7 +43,6 @@ function closeMobileMenu() {
 }
 
 function navLinkAnimate() {
-    // stop animation when not in mobile view
     if (window.innerWidth <= 576) {
         navLinks.forEach((link: HTMLElement, index: number) => {
             if (link.style.animation) {
@@ -57,9 +55,8 @@ function navLinkAnimate() {
 }
 
 // ----------------------------------------------------------------------
-// App Function
+// App Functions
 function app() {
-    // Call all initial functions
     getVH();
     scrollSpy();
 }
