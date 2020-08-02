@@ -1,0 +1,12 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Utils: Color
+* --------------------------------
+**/
+
+@each $color, $value in $colors {
+    .text-#{$color} {
+        color: $value !important;
+    }
+}

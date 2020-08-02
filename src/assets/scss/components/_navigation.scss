@@ -1,0 +1,179 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Component: Navigation
+* --------------------------------
+**/
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background: #121212;
+
+    transition: background 0.25s ease;
+
+    &.navigation-scroll {
+        background: #121212 !important;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+        display: flex;
+        min-height: 10vh;
+        margin: 0 auto;
+        padding: 0.5rem 0;
+        width: 90%;
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            .title {
+                font-size: 2.6rem;
+                font-weight: $font-weight-strong;
+                padding-left: 1rem;
+            }
+
+            img {
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+
+        ul.nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            list-style: none;
+            position: absolute;
+            background-color: #121212;
+            flex-direction: column;
+
+            flex: 1;
+            right: 0;
+            top: 8vh;
+            height: calc(var(--vh, 1vh) * 92);
+            width: 50%;
+            padding: 0;
+            margin: 0;
+
+            transform: translateX(100%);
+            transition: $transition-fast;
+
+            &.nav-open {
+                transform: translateX(0);
+            }
+
+            li.nav-item {
+                opacity: 0;
+            }
+
+            li a {
+                color: $white;
+                font-size: 2.6rem;
+                font-weight: $font-weight-bold;
+                text-decoration: none;
+                padding: 1rem;
+            }
+        }
+
+        .burger {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            flex: 1;
+            cursor: pointer;
+
+            div {
+                width: 25px;
+                height: 3px;
+                margin-bottom: 5px;
+                background-color: #fff;
+                transition: $transition-fast;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &.toggle {
+                .line1 {
+                    transform: rotate(-45deg) translate(-5px, 6px);
+                }
+                .line2 {
+                    opacity: 0;
+                }
+                .line3 {
+                    transform: rotate(45deg) translate(-5px, -6px);
+                }
+            }
+        }
+    }
+}
+
+@include responsive(xs) {
+    .navigation {
+        background: transparent;
+
+        nav {
+            width: 80%;
+            min-height: 8vh;
+
+            ul.nav {
+                justify-content: flex-start;
+                flex-direction: row;
+                position: static;
+                height: auto;
+                width: auto;
+
+                transform: translateX(0);
+                background-color: $transparent;
+
+                li.nav-item {
+                    opacity: 1;
+                    margin-right: 2rem;
+
+                    &:first-child {
+                        margin-left: 4rem;
+                    }
+
+                    a {
+                        padding: 2rem;
+                        font-size: 1.4rem;
+
+                        transition: color 0.25s ease-out;
+
+                        &:hover {
+                            color: #ff944d;
+                        }
+
+                        &:active,
+                        &.active {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+
+            .burger {
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes navItemAnim {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

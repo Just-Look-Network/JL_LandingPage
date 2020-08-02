@@ -1,0 +1,40 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Component: Container
+* --------------------------------
+**/
+
+// Normal Container
+.container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+@include responsive(xs) {
+    .container {
+        width: 80%;
+    }
+}
+
+// Grid Container
+.container-grid {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 5rem 1fr 1fr 1fr;
+    grid-template-rows: 14rem 1fr 1fr 1fr;
+
+    &.grid-main {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@include responsive(xs) {
+    .container-grid {
+        width: 80%;
+    }
+}

@@ -1,5 +1,35 @@
-$test-color: #ff6600;
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Main Scss Entrypoint
+* Author: Tim 'PoLLi' Pollerhof
+* --------------------------------
+**/
 
-h1 {
-    color: $test-color;
-}
+// Import important things first
+//@import 'functions';
+@import 'variables';
+
+@import 'important/mixins';
+@import 'important/root';
+@import 'important/reset';
+
+// Import Components
+@import 'components/navigation';
+@import 'components/container';
+@import 'components/lines';
+@import 'components/button';
+
+@import 'components/section';
+@import 'components/section_divider';
+@import 'components/section_main';
+@import 'components/section_modules';
+@import 'components/section_projects';
+@import 'components/section_about';
+@import 'components/section_footer';
+@import 'components/section_imprint';
+
+// Import Utilities
+@import 'utils/clearfix';
+@import 'utils/background';
+@import 'utils/color';

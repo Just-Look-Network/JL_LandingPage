@@ -1,0 +1,73 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Component: Button
+* --------------------------------
+**/
+
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+
+    color: $body-color;
+    background-color: transparent;
+
+    font-family: $button-font-family;
+    font-weight: $button-font-weight;
+    font-size: 1.4rem;
+    padding: $button-padding;
+
+    transition: $transition-fast;
+
+    // colors
+    @each $color, $value in $theme-colors {
+        &.button-#{$color} {
+            background-color: $value !important;
+        }
+    }
+
+    // sizes
+    &.button-sm {
+        font-size: $button-size-sm;
+    }
+
+    &.button-md {
+        font-size: $button-size-md;
+    }
+
+    &.button-lg {
+        font-size: $button-size-lg;
+    }
+
+    // hover n stuff
+    &:hover {
+        color: $body-color;
+        text-decoration: none;
+        box-shadow: $button-box-shadow;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: 0.5;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        box-shadow: $button-box-shadow-active;
+    }
+}
+
+a.button.disabled,
+fieldset:disabled a.button {
+    pointer-events: none;
+}

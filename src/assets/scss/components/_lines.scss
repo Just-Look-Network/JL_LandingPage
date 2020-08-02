@@ -1,0 +1,78 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Component: Vertical Lines
+* --------------------------------
+**/
+
+.line {
+    display: none;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        border-left: 1px solid $line-color;
+
+        top: 0;
+        bottom: 0;
+        left: 50%;
+
+        transform: translate(-50%);
+    }
+
+    // Vertical Line Top
+    &.line-top {
+        grid-row: 1/2;
+
+        &.line-small::after {
+            bottom: 6rem;
+        }
+    }
+
+    // Vertical Line Middle
+    &.line-middle {
+        grid-row: 2/4;
+    }
+
+    // Vertical Line Bottom
+    &.line-bottom {
+        grid-row: 4/5;
+
+        &.line-small::after {
+            top: 6rem;
+        }
+    }
+}
+
+.line-dot {
+    position: absolute;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    transform-origin: center center;
+    border: 1px solid $line-dot-border-color;
+    background: $line-dot-bg-color;
+    transform: translate(-50%) rotate(45deg);
+    left: 50%;
+
+    &.dot-top {
+        top: -4rem;
+    }
+
+    &.dot-middle {
+        top: 50%;
+        bottom: 50%;
+    }
+
+    &.dot-bottom {
+        bottom: -4rem;
+    }
+}
+
+@include responsive(sm) {
+    .line {
+        display: grid;
+        grid-column: 1/2;
+    }
+}

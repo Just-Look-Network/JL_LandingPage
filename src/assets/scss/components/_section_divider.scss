@@ -1,0 +1,40 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Component: Section - Divider
+* --------------------------------
+**/
+
+section.divider {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            font-size: 3.2rem;
+            margin: 0;
+        }
+
+        .desc {
+            font-size: 1.4rem;
+            font-weight: $font-weight-light;
+            margin: 0.5rem;
+            text-align: center;
+        }
+    }
+}
+
+@include responsive(sm) {
+    section.divider > .container {
+        .title {
+            font-size: 4.6rem;
+        }
+
+        .desc {
+            font-size: 1.6rem;
+            font-weight: $font-weight-base;
+        }
+    }
+}

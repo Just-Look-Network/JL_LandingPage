@@ -1,0 +1,64 @@
+/**
+* --------------------------------
+* Just-Look Network - LandingPage
+* Component: Section - Footer
+* --------------------------------
+**/
+
+section.footer {
+    .container {
+        display: flex;
+        align-items: center;
+        padding-left: 0rem;
+        overflow: hidden;
+
+        .copy {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+            color: $secondary;
+
+            .text {
+                font-size: 1.4rem;
+            }
+
+            .imprint > a {
+                font-size: 1.2rem;
+                color: inherit;
+                text-decoration: none;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+
+        .social {
+            display: flex;
+
+            ion-icon {
+                padding: 0.5rem;
+                font-size: 32px;
+                color: $secondary;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+@include responsive(sm) {
+    section.footer > .container {
+        padding-left: 10rem;
+
+        .copy > .text {
+            font-size: 1.6rem;
+        }
+
+        .copy > .imprint > a {
+            font-size: 1.4rem;
+        }
+    }
+}
